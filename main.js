@@ -5,11 +5,20 @@ const benefits = document.querySelector('.benefits');
 const headerContact = document.querySelector('.header__contact');
 const nav = document.querySelector('.navigation');
 const navLogo = document.querySelector('.navigation__logo-img');
+const burgerNavLogo = document.querySelector('.burger-menu__logo-img');
+
 const mainLink = document.querySelector('.mainlink');
 const aboutLink = document.querySelector('.aboutlink');
 const worksLink = document.querySelector('.workslink');
 const offerLink = document.querySelector('.offerlink');
 const collaborationLink = document.querySelector('.collaborationlink');
+
+const burgerMainLink = document.querySelector('.burger-menu__mainlink');
+const burgerAboutLink = document.querySelector('.burger-menu__aboutlink');
+const burgerWorksLink = document.querySelector('.burger-menu__workslink');
+const burgerOfferLink = document.querySelector('.burger-menu__offerlink');
+const burgerCollaborationLink = document.querySelector('.burger-menu__collaborationlink');
+
 const aboutMeSection = document.querySelector('.about-me');
 const ourWorksSection = document.querySelector('.our-works');
 const offerSection = document.querySelector('.offer');
@@ -17,7 +26,7 @@ const collaborationSection = document.querySelector('.collaboration');
 const navLogoHeight = navLogo.offsetHeight * 0.6;
 
 
-const showEl = () => {
+const showBenefits = () => {
   if ((window.outerHeight + window.pageYOffset) >= benefits.offsetHeight + benefits.offsetTop) {
     leftElemnt.classList.add('benefits__container--active');
     centerElemnt.classList.add('benefits__container--active');
@@ -27,7 +36,8 @@ const showEl = () => {
 
 
 const scrollToHandler = (element) => {
-  const height = element.offsetTop + element.offsetHeight - navLogoHeight;
+  const navBarHeight = window.innerWidth <= 1024 ? burgerNavLogo.offsetHeight : navLogoHeight
+  const height = element.offsetTop + element.offsetHeight - navBarHeight;
   const obj = {
     top: height,
     left: 0,
@@ -77,7 +87,7 @@ document.addEventListener('scroll', function () {
     navLogo.classList.remove('navigation__logo-img--active');
   }
 
-  showEl();
+  showBenefits();
   onScrollNavMenu();
 
 });
@@ -87,6 +97,16 @@ worksLink.addEventListener('click', () => scrollToHandler(aboutMeSection));
 offerLink.addEventListener('click', () => scrollToHandler(ourWorksSection));
 collaborationLink.addEventListener('click', () => scrollToHandler(offerSection));
 mainLink.addEventListener('click', () => window.scrollTo({
+  top: 0,
+  left: 0,
+  behavior: 'smooth'
+}));
+
+burgerAboutLink.addEventListener('click', () => scrollToHandler(benefits));
+burgerWorksLink.addEventListener('click', () => scrollToHandler(aboutMeSection));
+burgerOfferLink.addEventListener('click', () => scrollToHandler(ourWorksSection));
+burgerCollaborationLink.addEventListener('click', () => scrollToHandler(offerSection));
+burgerMainLink.addEventListener('click', () => window.scrollTo({
   top: 0,
   left: 0,
   behavior: 'smooth'

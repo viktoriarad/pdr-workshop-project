@@ -10,6 +10,7 @@
   <link
     href="https://fonts.googleapis.com/css?family=Francois+One|Montserrat:300,400,700,800&display=swap&subset=latin-ext"
     rel="stylesheet">
+  <link rel="stylesheet" href="hamburger.css">
   <link rel="stylesheet" href="style.css">
   <title>Usuwanie wgnieceń</title>
 </head>
@@ -76,6 +77,44 @@
       </div>
 
     </div>
+
+    <nav class="burger-menu">
+      <div class="burger-menu__wrap">
+        <div class="burger-menu__logo">
+          <a href="/" class="burger-menu__logo-link">
+            <img src="./img/logo.jpg" alt="logo" class="burger-menu__logo-img">
+            <h2 class="burger-menu__logo-title">Pdr workshop</h2>
+          </a>
+        </div>
+
+        <button class="hamburger hamburger--collapse" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+
+      <ul class="burger-menu__list">
+        <li class="burger-menu__item">
+          <a href="/#main" class="burger-menu__link burger-menu__mainlink burger-menu__link--hover">Główna</a>
+        </li>
+        <li class="burger-menu__item">
+          <a href="/#about" class="burger-menu__link burger-menu__aboutlink">O mnie</a>
+        </li>
+        <li class="burger-menu__item">
+          <a href="/#works" class="burger-menu__link burger-menu__workslink">Zlecenia</a>
+        </li>
+        <li class="burger-menu__item">
+          <a href="/#offer" class="burger-menu__link burger-menu__offerlink">Oferta</a>
+        </li>
+        <li class="burger-menu__item">
+          <a href="/#collaboration" class="burger-menu__link burger-menu__collaborationlink">Współpraca</a>
+        </li>
+        <li class="burger-menu__item">
+          <a href="contact.html" class="burger-menu__link">Kontakt</a>
+        </li>
+      </ul>
+    </nav>
 
     <nav class="navigation header__navigation">
       <div class="navigation__logo">
@@ -253,7 +292,9 @@
       <p class="footer__copy">Copyright &copy; 2019 Warszawa, Workshop</p>
     </div>
   </footer>
+  <script src="burgerMenu.js"></script>
   <script src="main.js"></script>
+
 </body>
 
 </html>
