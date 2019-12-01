@@ -213,7 +213,7 @@ body {
 .benefits {
   width: 100%;
   height: 30vh;
-  background-image: url(/img/bgtool.jpg);
+  background-image: url(./img/bgtool.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -468,12 +468,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px 0;
+  padding: 50px 0;
 
 }
 
 .contact-bg {
   background-color: #20293f;
+  position: relative;
 }
 
 .contact-block {
@@ -516,6 +517,7 @@ button.hamburger:focus {
   display: none;
   background-color: #fff;
   position: fixed;
+  /* top: 0; */
   z-index: 1;
   width: 100%;
 }
@@ -606,6 +608,12 @@ button.hamburger:focus {
 
   .header__title-content {
     top: 50%;
+  }
+
+  .contact-info {
+
+    padding: 150px 0;
+
   }
 
 
