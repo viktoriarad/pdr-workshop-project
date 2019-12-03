@@ -354,9 +354,9 @@ body {
   width: 50%;
 }
 
-.offer__img {
+/* .offer__img {
   width: 35%;
-}
+} */
 
 .offer__video {
   width: 35%;
@@ -686,9 +686,15 @@ button.hamburger:focus {
     width: 80%;
   }
 
+  /*
   .offer__img {
     margin-top: 30px;
     width: 80%;
+  } */
+
+  .offer__video {
+    margin-top: 30px;
+    width: 90%;
   }
 
 
@@ -760,6 +766,7 @@ button.hamburger:focus {
     padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column-reverse
   }
 
   .about-me__content {
@@ -769,7 +776,7 @@ button.hamburger:focus {
 
   .about-me__img {
     display: block;
-    margin-top: 20px;
+    margin-bottom: 20px;
     width: 30%;
 
   }
