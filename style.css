@@ -282,6 +282,7 @@ body {
 
 .our-works__img {
   width: 30%;
+  height: 100%;
   margin: 20px 0;
 }
 
@@ -513,25 +514,27 @@ button.hamburger:focus {
   outline: transparent auto 1px;
 }
 
+
 .burger-menu {
   display: none;
   background-color: #fff;
   position: fixed;
-  /* top: 0; */
   z-index: 1;
   width: 100%;
 }
 
 .burger-menu__wrap {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   display: flex;
   align-content: center;
+  justify-content: space-between;
 }
 
 
 .burger-menu__logo {
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 
 .burger-menu__logo-link {
@@ -541,17 +544,15 @@ button.hamburger:focus {
   color: #1b1b24;
 }
 
-
 .burger-menu__logo-title {
-  display: inline-block;
   margin: 0 10px;
   text-transform: uppercase;
   font-weight: 800;
 }
 
 .burger-menu__logo-img {
-  width: 10%;
-  display: inline-block;
+  height: 9vh;
+  margin: 5px 0;
 }
 
 
@@ -611,9 +612,7 @@ button.hamburger:focus {
   }
 
   .contact-info {
-
     padding: 150px 0;
-
   }
 
 
@@ -694,31 +693,6 @@ button.hamburger:focus {
     margin-top: 30px;
   }
 
-
-
-}
-
-@media (max-width: 700px) {
-
-  .about-me__content-container {
-    padding-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .about-me__content {
-    max-width: 80%;
-    line-height: 25px;
-  }
-
-  .about-me__img {
-    display: block;
-    margin-top: 20px;
-    width: 30%;
-
-  }
-
-
   .footer__container {
     display: flex;
     justify-content: center;
@@ -738,4 +712,104 @@ button.hamburger:focus {
   .footer__title {
     margin: 0 auto;
   }
+}
+
+
+
+@media (max-width: 700px) {
+
+
+  .about-me__content-container {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about-me__content {
+    max-width: 80%;
+    line-height: 25px;
+  }
+
+  .about-me__img {
+    display: block;
+    margin-top: 20px;
+    width: 30%;
+
+  }
+
+  /* .footer__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px 0;
+  }
+
+  .footer__contact-block {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .footer__logo {
+    width: 90%;
+  }
+
+  .footer__title {
+    margin: 0 auto;
+  } */
+}
+
+
+@media (max-width: 600px) {
+  .burger-menu__logo-title {
+    font-size: 20px;
+  }
+
+  .header__title {
+    font-size: 50px;
+  }
+
+  .benefits__icon {
+    font-size: 45px;
+  }
+
+  .benefits__text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+
+
+  .header__title {
+    font-size: 40px;
+  }
+
+  .about-me__img {
+    width: 50%;
+  }
+
+
+  .title {
+    margin: 20px 30px;
+  }
+
+}
+
+@media (max-width: 350px) {
+  .burger-menu__logo-title {
+    font-size: 16px;
+  }
+
+  .header__title {
+    font-size: 35px;
+  }
+
+  .benefits__icon {
+    font-size: 40px;
+  }
+
+  .benefits__text {
+    font-size: 14px;
+  }
+
 }
