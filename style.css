@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: '28 days later';
+  src: url(./font_28_days_later/28\ Days\ Later.woff);
+}
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -15,13 +19,14 @@ body {
 .header {
   position: relative;
   width: 100%;
-  height: 120vh;
+  height: 100vh;
   background-image: url(img/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
 }
 
+/*
 .header__contact {
   width: 100%;
   height: auto;
@@ -108,7 +113,7 @@ body {
 .header__media:hover {
   color: #1b1b24;
 }
-
+ */
 
 .navigation {
   width: 100%;
@@ -130,7 +135,6 @@ body {
   box-shadow: 0px 10px 10px -15px #111;
 }
 
-
 .navigation__logo {
   width: 30%;
   display: inline-block;
@@ -139,8 +143,6 @@ body {
   margin: 5px 40px;
 }
 
-
-
 .navigation__logo-link {
   display: flex;
   align-items: center;
@@ -148,12 +150,12 @@ body {
   color: #1b1b24;
 }
 
-
 .navigation__logo-title {
   display: inline-block;
   margin: 0 10px;
   text-transform: uppercase;
   font-weight: 800;
+  font-family: '28 days later'
 }
 
 .navigation__logo-img {
@@ -180,6 +182,10 @@ body {
   font-size: 14px;
 }
 
+.navigation__icon {
+  font-size: 18px;
+}
+
 .navigation__link--hover {
   border-bottom: 1px solid #1b1b24;
 }
@@ -197,16 +203,18 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   color: #f9f9f9;
+  text-transform: uppercase;
 }
 
 .header__title {
-  font-size: 65px;
+  font-size: 60px;
+  font-family: '28 days later'
 }
 
+.header__small-title {
+  font-size: 40px;
+  font-family: '28 days later'
 
-
-.header__title-btn:hover {
-  background-color: #abb0bb;
 }
 
 
@@ -215,7 +223,7 @@ body {
   height: 30vh;
   background-image: url(./img/bgtool.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
 }
 
@@ -396,7 +404,7 @@ body {
 }
 
 .footer {
-  background-color: #20293f;
+  background-color: #292929;
 }
 
 
@@ -478,7 +486,7 @@ body {
 }
 
 .contact-bg {
-  background-color: #20293f;
+  background-color: #292929;
   position: relative;
 }
 
