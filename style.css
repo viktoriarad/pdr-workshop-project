@@ -26,95 +26,6 @@ body {
   background-position: top center;
 }
 
-/*
-.header__contact {
-  width: 100%;
-  height: auto;
-  background-color: #f2f2f2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header__block-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.header__contact-block {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  padding: 10px 40px;
-}
-
-.header__social-media {
-  display: flex;
-  justify-content: right;
-  align-items: center;
-}
-
-
-.header__icon-wrap {
-  position: relative;
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: #1b1b24;
-  margin-right: 10px;
-}
-
-.header__icon-wrap i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #f9f9f9;
-  font-size: 14px;
-}
-
-.header__block-title {
-  color: #7b7e83;
-  font-size: 12px;
-}
-
-.header__block-content {
-  display: block;
-  font-size: 13px;
-  text-decoration: none;
-  color: #1b1b24;
-  transition: .3s;
-}
-
-.header__block-content-link {
-  display: block;
-  font-size: 13px;
-  text-decoration: none;
-  color: #1b1b24;
-  transition: .3s;
-  cursor: pointer;
-}
-
-.header__block-content-link:hover {
-  color: #abb0bb;
-}
-
-.header__social-media {
-  padding: 10px 40px;
-}
-
-.header__media {
-  color: #abb0bb;
-  margin: 0 10px;
-  transition: .3s;
-}
-
-.header__media:hover {
-  color: #1b1b24;
-} */
-
-
 .navigation {
   width: 100%;
   height: auto;
@@ -153,7 +64,6 @@ body {
 .navigation__logo-title {
   display: inline-block;
   margin: 0 10px;
-  text-transform: uppercase;
   font-weight: 800;
   font-family: '28 days later'
 }
@@ -203,18 +113,18 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   color: #f9f9f9;
-  text-transform: uppercase;
 }
 
 .header__title {
   font-size: 60px;
-  font-family: '28 days later'
+  font-family: '28 days later';
+  letter-spacing: 20px;
 }
 
 .header__small-title {
   font-size: 40px;
-  font-family: '28 days later'
-
+  font-family: '28 days later';
+  letter-spacing: 20px;
 }
 
 
@@ -296,7 +206,7 @@ body {
 
 .our-works__title,
 .title {
-  margin: 40px;
+  margin: 30px;
   text-transform: uppercase;
   color: #1b1b24;
   font-weight: 300;
@@ -315,13 +225,16 @@ body {
 }
 
 .our-works__all-works {
+  width: 200px;
   background-color: #1b1b24;
   color: #f2f2f2;
   margin: 0 auto;
   display: block;
-  border: none;
   font-size: 16px;
   padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: .3s;
 }
 
 .our-works__all-works:hover {
@@ -329,7 +242,6 @@ body {
 }
 
 .about-me__content-container {
-  padding-top: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -341,7 +253,7 @@ body {
 }
 
 .about-me__img {
-  width: 20%;
+  width: 25%;
 }
 
 .offer__container {
@@ -407,12 +319,17 @@ body {
   background-color: #292929;
 }
 
-
 .footer__container {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 30px 0;
+}
+
+.footer__contact-block-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .footer__contact-block {
@@ -421,7 +338,6 @@ body {
   align-items: center;
   padding: 10px 10px;
 }
-
 
 .footer__icon {
   color: #f9f9f9;
@@ -533,6 +449,7 @@ button.hamburger:focus {
   position: fixed;
   z-index: 1;
   width: 100%;
+  box-shadow: 0px 10px 10px -15px #111;
 }
 
 .burger-menu__wrap {
@@ -557,8 +474,8 @@ button.hamburger:focus {
 }
 
 .burger-menu__logo-title {
+  font-family: '28 days later';
   margin: 0 10px;
-  text-transform: uppercase;
   font-weight: 800;
 }
 
@@ -594,39 +511,9 @@ button.hamburger:focus {
 .burger-menu__link {
   color: #1b1b24;
   text-decoration: none;
-
-}
-
-@media (max-width: 1250px) {
-  .header__contact-block {
-    padding: 10px 20px;
-  }
 }
 
 @media (max-width: 1100px) {
-  .header__contact-block {
-    padding: 10px 10px;
-  }
-
-  .footer__contact-block {
-    padding: 10px 0;
-  }
-}
-
-@media (max-width: 1024px) {
-
-  .header {
-    height: 100vh;
-  }
-
-  .header__title-content {
-    top: 50%;
-  }
-
-  .contact-info {
-    padding: 150px 0;
-  }
-
 
   .navigation {
     display: none;
@@ -640,9 +527,27 @@ button.hamburger:focus {
     display: block;
   }
 
+  .navigation__item {
+    display: inline-block;
+    margin: 0px 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .header__title-content {
+    top: 50%;
+  }
+
+  .contact-info {
+    padding: 150px 0;
+  }
+
+  .offer__video {
+    width: 40%;
+  }
+
   .footer__container {
-    display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     padding: 30px 0;
   }
@@ -663,17 +568,33 @@ button.hamburger:focus {
 @media (max-width: 900px) {
 
   .about-me__img {
-    width: 25%;
+    width: 30%;
   }
+
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px 0;
+  }
+
+  .footer__contact-block-wrapper {
+    display: block;
+  }
+
+  .footer__contact-block {
+    width: 100%;
+  }
+
+  .footer__logo {
+    width: 100%;
+  }
+
 
 }
 
 @media (max-width: 768px) {
-
-  .about-me__img {
-    width: 30%;
-  }
-
   .our-works__img {
     width: 40%;
   }
@@ -683,54 +604,46 @@ button.hamburger:focus {
   }
 
   .offer__container-content {
-    width: 80%;
-  }
-
-  /*
-  .offer__img {
-    margin-top: 30px;
-    width: 80%;
-  } */
-
-  .offer__video {
-    margin-top: 30px;
     width: 90%;
   }
 
+  .title {
+    margin: 25px;
+  }
+
+  .offer__video {
+    margin-top: 20px;
+    width: 90%;
+  }
+
+  .about-me__content-container {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  .about-me__content {
+    max-width: 90%;
+    line-height: 25px;
+  }
+
+  .about-me__img {
+    display: block;
+    margin-bottom: 20px;
+    width: 90%;
+  }
 
   .collaboration__container {
     flex-wrap: wrap;
   }
 
   .collaboration__img {
-    width: 80%;
-  }
-
-  .collaboration__container-content {
-    width: 80%;
-    margin-top: 30px;
-  }
-
-  .footer__container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 30px 0;
-  }
-
-  .footer__contact-block {
-    margin: 0 auto;
-    width: 80%;
-  }
-
-  .footer__logo {
     width: 90%;
   }
 
-  .footer__title {
-    margin: 0 auto;
+  .collaboration__container-content {
+    width: 90%;
+    margin-top: 30px;
   }
-
 
   .contact-info {
     flex-wrap: wrap;
@@ -738,47 +651,24 @@ button.hamburger:focus {
   }
 
   .contact-block {
-    width: 100%;
-    margin-top: 30px;
+    width: 90%;
+  }
+
+  .contact__icon {
+    width: 7%;
   }
 
   .map-container {
-    width: 70%;
+    width: 90%;
   }
 
   .flex-wrapper {
-    width: 100%;
+    width: 90%;
   }
 
   .map {
     width: 100%;
     height: 40vh;
-  }
-
-}
-
-
-
-@media (max-width: 700px) {
-
-
-  .about-me__content-container {
-    padding-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column-reverse
-  }
-
-  .about-me__content {
-    max-width: 80%;
-    line-height: 25px;
-  }
-
-  .about-me__img {
-    display: block;
-    margin-bottom: 20px;
-    width: 30%;
-
   }
 
 }
@@ -793,12 +683,12 @@ button.hamburger:focus {
     font-size: 50px;
   }
 
-  .benefits__icon {
-    font-size: 45px;
+  .contact__icon {
+    width: 15%;
   }
 
-  .benefits__text {
-    font-size: 16px;
+  .header__small-title {
+    font-size: 30px;
   }
 
   .contact-info {
@@ -808,19 +698,25 @@ button.hamburger:focus {
 }
 
 @media (max-width: 500px) {
+  .our-works__img {
+    width: 90%;
+  }
+
   .header__title {
     font-size: 40px;
+    letter-spacing: 10px;
   }
 
-  .about-me__img {
-    width: 50%;
+  .header__small-title {
+    margin-top: 10px;
+    font-size: 25px;
+    letter-spacing: 10px;
+    width: 100%;
   }
-
 
   .title {
-    margin: 20px 30px;
+    margin: 25px 30px;
   }
-
 }
 
 @media (max-width: 350px) {
@@ -829,7 +725,15 @@ button.hamburger:focus {
   }
 
   .header__title {
-    font-size: 35px;
+    font-size: 30px;
+    letter-spacing: 10px;
+  }
+
+  .header__small-title {
+    margin-top: 10px;
+    font-size: 18px;
+    letter-spacing: 10px;
+    width: 100%;
   }
 
   .benefits__icon {
@@ -843,21 +747,19 @@ button.hamburger:focus {
 }
 
 @media (max-width: 812px) and (orientation: landscape) {
-
   .header__title {
     font-size: 40px;
+    letter-spacing: 10px;
   }
 
-  .benefits {
-    height: 50vh;
-  }
-
-  .benefits__bg {
-    height: 50vh;
+  .header__small-title {
+    margin-top: 10px;
+    font-size: 35px;
+    letter-spacing: 10px;
+    width: 100%;
   }
 
   .contact-info {
     padding: 80px 0;
   }
-
 }

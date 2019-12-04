@@ -1,8 +1,3 @@
-// const leftElemnt = document.querySelector('.leftBenefits');
-// const centerElemnt = document.querySelector('.centerBenefits');
-// const rightElemnt = document.querySelector('.rightBenefits');
-// const benefits = document.querySelector('.benefits');
-// const headerContact = document.querySelector('.header__contact');
 const nav = document.querySelector('.navigation');
 const navLogo = document.querySelector('.navigation__logo-img');
 const burgerNavLogo = document.querySelector('.burger-menu__logo-img');
@@ -25,16 +20,6 @@ const ourWorksSection = document.querySelector('.our-works');
 const offerSection = document.querySelector('.offer');
 const collaborationSection = document.querySelector('.collaboration');
 const navLogoHeight = navLogo.offsetHeight * 0.6;
-
-
-// const showBenefits = () => {
-//   if ((window.outerHeight + window.pageYOffset) >= benefits.offsetHeight + benefits.offsetTop) {
-//     leftElemnt.classList.add('benefits__container--active');
-//     centerElemnt.classList.add('benefits__container--active');
-//     rightElemnt.classList.add('benefits__container--active');
-//   }
-// }
-
 
 const scrollToHandler = (element) => {
   const navBarHeight = window.innerWidth <= 1024 ? burgerNavLogo.offsetHeight : navLogoHeight
@@ -61,15 +46,6 @@ const onScrollNavMenu = () => {
 
   const collaborationStart = aboutEnd;
   const collaborationEnd = collaborationStart + collaborationSection.offsetHeight;
-
-  // const aboutStart = headerSection.offsetTop + headerSection.offsetHeight - navLogoHeight;
-  // const aboutEnd = aboutStart + aboutMeSection.offsetHeight;
-  // const worksStart = aboutEnd;
-  // const worksEnd = worksStart + ourWorksSection.offsetHeight;
-  // const offerStart = worksEnd;
-  // const offerEnd = offerStart + offerSection.offsetHeight;
-  // const collaborationStart = offerEnd;
-  // const collaborationEnd = collaborationStart + collaborationSection.offsetHeight;
 
   mainLink.classList.remove('navigation__link--hover');
   offerLink.classList.remove('navigation__link--hover');
@@ -100,8 +76,6 @@ document.addEventListener('scroll', function () {
     nav.classList.remove('navigation--active');
     navLogo.classList.remove('navigation__logo-img--active');
   }
-
-  // showBenefits();
 
   onScrollNavMenu();
 
