@@ -64,7 +64,7 @@ body {
 .navigation__logo-title {
   display: inline-block;
   margin: 0 10px;
-  font-size: 28px;
+  font-size: 30px;
   font-family: '28 days later';
   letter-spacing: 3px;
   font-weight: normal;
@@ -320,7 +320,7 @@ body {
 }
 
 .footer__title {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: normal;
 }
 
