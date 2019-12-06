@@ -11,9 +11,9 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
   color: #1b1b24;
   cursor: default;
+  font-weight: normal;
 }
 
 .header {
@@ -23,7 +23,7 @@ body {
   background-image: url(img/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0% 25%;
+  background-position: 50% 25%;
 }
 
 .navigation {
@@ -64,9 +64,10 @@ body {
 .navigation__logo-title {
   display: inline-block;
   margin: 0 10px;
-  font-weight: 800;
+  font-size: 28px;
   font-family: '28 days later';
   letter-spacing: 3px;
+  font-weight: normal;
 }
 
 .navigation__logo-img {
@@ -119,79 +120,16 @@ body {
 .header__title {
   font-size: 60px;
   font-family: '28 days later';
-  letter-spacing: 20px;
+  letter-spacing: 18px;
+  font-weight: normal;
 }
 
 .header__small-title {
-  font-size: 40px;
+  font-size: 35px;
   font-family: '28 days later';
-  letter-spacing: 20px;
+  letter-spacing: 10px;
+  font-weight: normal;
 }
-
-
-.benefits {
-  width: 100%;
-  height: 30vh;
-  background-image: url(./img/bgtool.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-}
-
-.benefits__bg {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 30vh;
-  background-color: rgba(22, 19, 19, 0.8);
-  overflow: hidden;
-}
-
-
-.leftBenefits {
-  transform: translateX(-100%);
-  transition: .5s;
-}
-
-.leftBenefits--active {
-  transform: translateX(0);
-}
-
-.centerBenefits {
-  transform: translateY(150%);
-  transition: .5s;
-}
-
-.rightBenefits {
-  transform: translateX(100%);
-  transition: .5s;
-}
-
-.benefits__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 30%;
-}
-
-.benefits__container--active {
-  transform: translate(0);
-}
-
-.benefits__icon {
-  font-size: 60px;
-  color: #f2f2f2;
-  margin-bottom: 30px;
-}
-
-.benefits__text {
-  text-align: center;
-  color: #f2f2f2;
-  font-size: 20px;
-  font-weight: bold;
-}
-
 
 .our-works__img-container {
   display: flex;
@@ -377,8 +315,13 @@ body {
   text-decoration: none;
   color: #f9f9f9;
   font-family: '28 days later';
-  font-size: 22px;
   letter-spacing: 3px;
+
+}
+
+.footer__title {
+  font-size: 28px;
+  font-weight: normal;
 }
 
 
@@ -410,16 +353,18 @@ body {
 }
 
 .contact-block {
-  width: 50%;
+  width: 60%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  margin-right: 40px;
 }
 
 .map-container {
-  width: 50%;
+  width: 70%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  margin-left: 40px;
   align-items: center;
 }
 
@@ -428,7 +373,7 @@ body {
 }
 
 .map {
-  width: 150%;
+  width: 280%;
   height: 55vh;
 }
 
@@ -479,7 +424,6 @@ button.hamburger:focus {
 .burger-menu__logo-title {
   font-family: '28 days later';
   margin: 0 10px;
-  font-weight: 800;
 }
 
 .burger-menu__logo-img {
@@ -534,16 +478,20 @@ button.hamburger:focus {
     display: inline-block;
     margin: 0px 10px;
   }
+
+  .header {
+    height: 100vh;
+  }
+
+  .contact-info {
+    padding: 150px 0;
+  }
 }
 
 @media (max-width: 1024px) {
 
   .header__title-content {
     top: 50%;
-  }
-
-  .contact-info {
-    padding: 150px 0;
   }
 
   .offer__video {
@@ -656,6 +604,8 @@ button.hamburger:focus {
 
   .contact-block {
     width: 90%;
+    justify-content: center;
+    margin: 0;
   }
 
   .contact__icon {
@@ -664,6 +614,8 @@ button.hamburger:focus {
 
   .map-container {
     width: 90%;
+    justify-content: center;
+    margin: 0;
   }
 
   .flex-wrapper {
@@ -713,7 +665,7 @@ button.hamburger:focus {
 
   .header__small-title {
     margin-top: 10px;
-    font-size: 25px;
+    font-size: 19px;
     letter-spacing: 10px;
     width: 100%;
   }
@@ -735,7 +687,7 @@ button.hamburger:focus {
 
   .header__small-title {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 13px;
     letter-spacing: 10px;
     width: 100%;
   }
