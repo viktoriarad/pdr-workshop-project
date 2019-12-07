@@ -22,8 +22,9 @@ const collaborationSection = document.querySelector('.collaboration');
 const navLogoHeight = navLogo.offsetHeight * 0.6;
 
 const scrollToHandler = (element) => {
-  const navBarHeight = window.innerWidth <= 1024 ? burgerNavLogo.offsetHeight : navLogoHeight
-  const height = element.offsetTop + element.offsetHeight - navBarHeight;
+  const navHeight = nav.classList.contains('navigation--active') ? 0 : nav.offsetHeight;
+  const navBarHeight = window.innerWidth <= 1100 ? burgerNavLogo.offsetHeight : navLogoHeight
+  const height = element.offsetTop - navHeight + element.offsetHeight - navBarHeight;
   const obj = {
     top: height,
     left: 0,
@@ -31,6 +32,30 @@ const scrollToHandler = (element) => {
   }
 
   window.scrollTo(obj);
+};
+
+const bookmarksOnLoadingHandler = () => {
+  const url = window.location.href;
+  const bookmark = url.split('/#')[1]
+
+  if (!bookmark) {
+    return;
+  }
+
+  switch (bookmark) {
+    case 'offer':
+      scrollToHandler(headerSection);
+      break;
+    case 'works':
+      scrollToHandler(offerSection);
+      break;
+    case 'about':
+      scrollToHandler(ourWorksSection);
+      break;
+    case 'collaboration':
+      scrollToHandler(aboutMeSection);
+      break;
+  }
 };
 
 const onScrollNavMenu = () => {
@@ -100,3 +125,5 @@ burgerMainLink.addEventListener('click', () => window.scrollTo({
   left: 0,
   behavior: 'smooth'
 }));
+
+window.addEventListener("load", bookmarksOnLoadingHandler);
