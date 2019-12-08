@@ -131,6 +131,37 @@ body {
   font-weight: normal;
 }
 
+.aboutpdr {
+  margin-bottom: 30px;
+}
+
+.aboutpdr__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.aboutpdr__content {
+  margin-bottom: 10px;
+}
+
+.aboutpdt__img-container {
+  width: 30%;
+}
+
+.aboutpdr__img {
+  width: 100%;
+}
+
+.aboutpdr__caption-img {
+  font-size: 12px;
+}
+
+.aboutpdr__container-content {
+  width: 50%;
+}
+
+
 .our-works__img-container {
   display: flex;
   flex-wrap: wrap;
@@ -138,7 +169,7 @@ body {
 }
 
 .our-works__img {
-  width: 30%;
+  width: 45%;
   height: 100%;
   margin: 20px 0;
 }
@@ -226,6 +257,7 @@ body {
   font-size: 12px;
 }
 
+
 .collaboration {
   margin-bottom: 30px;
 }
@@ -234,7 +266,6 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
 }
 
 .collaboration__img {
@@ -424,6 +455,7 @@ button.hamburger:focus {
 .burger-menu__logo-title {
   font-family: '28 days later';
   margin: 0 10px;
+  font-weight: normal;
 }
 
 .burger-menu__logo-img {
@@ -460,7 +492,7 @@ button.hamburger:focus {
   text-decoration: none;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
 
   .navigation {
     display: none;
@@ -542,13 +574,11 @@ button.hamburger:focus {
   .footer__logo {
     width: 100%;
   }
-
-
 }
 
 @media (max-width: 768px) {
   .our-works__img {
-    width: 40%;
+    /* width: 45%; */
   }
 
   .offer__container {
@@ -582,6 +612,19 @@ button.hamburger:focus {
     display: block;
     margin-bottom: 20px;
     width: 90%;
+  }
+
+  .aboutpdr__container {
+    flex-wrap: wrap;
+  }
+
+  .aboutpdt__img-container {
+    width: 90%;
+  }
+
+  .aboutpdr__container-content {
+    width: 90%;
+    margin-top: 30px;
   }
 
   .collaboration__container {
@@ -632,7 +675,7 @@ button.hamburger:focus {
 
 @media (max-width: 600px) {
   .burger-menu__logo-title {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .header__title {
@@ -677,7 +720,7 @@ button.hamburger:focus {
 
 @media (max-width: 350px) {
   .burger-menu__logo-title {
-    font-size: 16px;
+    font-size: 26px;
   }
 
   .header__title {
